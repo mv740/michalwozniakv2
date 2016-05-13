@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- base url -->
+    <base href="/michalwozniakV2/">
+
+    <title>michal wozniak</title>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
+<md-content ng-controller="HomeController">
+    <md-toolbar class="md-tall">
+        <div class="md-toolbar-tools ">
+            <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+                <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+            </md-button>
+            <h2>
+                <span>Toolbar with Icon Buttons</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Favorite" ui-sref="partial1">
+                test1
+            </md-button>
+            <md-button class="md-icon-button" aria-label="More" ui-sref="state2">
+              test2
+            </md-button>
+        </div>
+    </md-toolbar>
+</md-content>
+<div layout="row" ng-controller="HomeController">
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-content layout-padding >
+            <p hide-md show-gt-md>
+                This sidenav is locked open on your device. To go back to the default behavior,
+                narrow your display.
+            </p>
+        </md-content>
+    </md-sidenav>
+
+    <md-content flex layout-padding>
+        <div layout="column" layout-fill layout-align="top center">
+            <div ui-view>
+
+            </div>
+        </div>
+        <div flex></div>
+    </md-content>
+</div>
+
+
+<div>
+
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="node_modules/angular-material/angular-material.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="app/config/app.module.js"></script>
+<script src="app/config/app.route.js"></script>
+<script src="app/controllers/home.controller.js"></script>
 </body>
 </html>
