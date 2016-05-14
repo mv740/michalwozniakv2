@@ -11,7 +11,7 @@
 
     function config($stateProvider, $urlRouterProvider, $locationProvider) {
 
-        $urlRouterProvider.otherwise('/partial1');
+        $urlRouterProvider.otherwise('/');
         //routing
         $stateProvider
             .state('partial1', {
@@ -23,6 +23,27 @@
                 url: '/state2',
                 templateUrl: 'app/views/partial2.html',
                 authenticate : false
+            })
+            .state('about', {
+                url: '/about',
+                templateUrl: 'app/views/about.html',
+                authenticate : false
+            })
+            .state('projects', {
+                url: '/projects',
+                templateUrl: 'app/views/projects.html',
+                authenticate : false
+            })
+            .state('homelab', {
+                url: '/homelab',
+                templateUrl: 'app/views/homelab.html',
+                authenticate : false
+            })
+            .state('contact', {
+                url: '/contact',
+                templateUrl: 'app/views/contact.html',
+                authenticate : false,
+                controller: 'ContactController as vm',
             });
 
 

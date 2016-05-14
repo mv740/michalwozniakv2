@@ -14,10 +14,6 @@
             $mdSidenav('left').toggle();
         };
     }
-
-
-
-
     
 
 })();

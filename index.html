@@ -33,34 +33,40 @@
         <md-content layout-padding layout="column" layout-align="space-between stretch">
             <md-button ui-sref="partial1" ui-sref-active="md-raised md-primary">
                 <div flex-offset="30" align="left">
-                    <md-icon md-font-icon="Material Icons">person</md-icon>
-                    partial
+                    <md-icon md-font-icon="Material Icons">home</md-icon>
+                    <span flex-offset="5">home</span>
                 </div>
             </md-button>
-            <md-button ui-sref="state2" ui-sref-active="md-raised md-primary">
+            <md-button ui-sref="about" ui-sref-active="md-raised md-primary">
+                <div flex-offset="30" align="left">
+                    <md-icon md-font-icon="Material Icons">person</md-icon>
+                    <span flex-offset="5">about</span>
+                </div>
+            </md-button>
+            <md-button ui-sref="projects" ui-sref-active="md-raised md-primary">
                 <div flex-offset="30" align="left">
                     <md-icon md-font-icon="Material Icons">work</md-icon>
-                    Projects
+                    <span flex-offset="5">projects</span>
                 </div>
             </md-button>
-            <md-button ui-sref="partial1" ui-sref-active="md-raised md-primary">
+            <md-button ui-sref="homelab" ui-sref-active="md-raised md-primary">
                 <div flex-offset="30" align="left">
                     <md-icon md-font-icon="Material Icons">person</md-icon>
-                    HomeLab
+                    <span flex-offset="5">homelab</span>
                 </div>
             </md-button>
-            <md-button ui-sref="partial1" ui-sref-active="md-raised md-primary">
+            <md-button ui-sref="contact" ui-sref-active="md-raised md-primary">
                 <div flex-offset="30" align="left">
                     <md-icon md-font-icon="Material Icons">email</md-icon>
-                    Contact
+                    <span flex-offset="5">contact</span>
                 </div>
             </md-button>
         </md-content>
     </md-sidenav>
 
-    <md-content flex layout-padding>
-        <div layout="column" layout-fill layout-align="top center">
-            <div ui-view md-whiteframe="3" layout-margin="10">
+    <md-content flex>
+        <div layout-fill layout-align="space-arround center">
+            <div ui-view>
 
             </div>
         </div>
@@ -68,19 +74,17 @@
     </md-content>
 </div>
 
-
-<div>
-
-</div>
-
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-animate/angular-animate.js"></script>
 <script src="node_modules/angular-aria/angular-aria.js"></script>
 <script type="text/javascript" src="node_modules/angular-material/angular-material.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="http://maps.google.com/maps/api/js?v=3"></script>
+<script src="node_modules/ngmap/build/scripts/ng-map.js"></script>
 
 <script src="app/config/app.module.js"></script>
 <script src="app/config/app.route.js"></script>
 <script src="app/controllers/home.controller.js"></script>
+<script src="app/controllers/contact.controller.js"></script>
 </body>
 </html>
