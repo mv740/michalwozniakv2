@@ -1,6 +1,6 @@
 <div layout="row" layout-xs="column"  layout-wrap>
     <md-content class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}" ng-repeat="project in vm.projects">
-        <md-card md-whiteframe="3" style="width: 350px">
+        <md-card md-whiteframe="3" style="width: 345px">
             <md-card-header>
                 <md-card-avatar>
                     <img src="{{project.avatarIconUrl}}">
@@ -10,7 +10,7 @@
                     <span class="md-subhead">{{project.subhead}}</span>
                 </md-card-header-text>
             </md-card-header>
-            <img ng-src="{{project.avatarImageUrl}}" class="md-card-image" alt="Not found">
+            <img ng-src="{{project.avatarImageUrl}}" class="md-card-image"  alt="Not found">
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">{{project.cardTitle}}</span>
