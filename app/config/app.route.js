@@ -32,7 +32,8 @@
             .state('projects', {
                 url: '/projects',
                 templateUrl: 'app/views/projects.html',
-                authenticate : false
+                authenticate : false,
+                controller: 'ProjectsController as vm'
             })
             .state('homelab', {
                 url: '/homelab',
@@ -43,7 +44,7 @@
                 url: '/contact',
                 templateUrl: 'app/views/contact.html',
                 authenticate : false,
-                controller: 'ContactController as vm',
+                controller: 'ContactController as vm'
             });
 
 

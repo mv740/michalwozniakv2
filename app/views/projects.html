@@ -1,93 +1,29 @@
-<div layout="row" layout-xs="column">
-    <md-content class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
-        <md-card md-whiteframe="3">
+<div layout="row" layout-xs="column"  layout-wrap>
+    <md-content class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}" ng-repeat="project in vm.projects">
+        <md-card md-whiteframe="3" style="width: 350px">
             <md-card-header>
                 <md-card-avatar>
-                    <img src="assets/icons/codeigniter.svg">
+                    <img src="{{project.avatarIconUrl}}">
                 </md-card-avatar>
                 <md-card-header-text>
-                    <span class="md-title">CodeIgniter</span>
-                    <span class="md-subhead">Web Application</span>
+                    <span class="md-title">{{project.headerTitle}}</span>
+                    <span class="md-subhead">{{project.subhead}}</span>
                 </md-card-header-text>
             </md-card-header>
-            <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+            <img ng-src="{{project.avatarImageUrl}}" class="md-card-image" alt="Not found">
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">Powon</span>
+                    <span class="md-headline">{{project.cardTitle}}</span>
                 </md-card-title-text>
             </md-card-title>
             <md-card-content>
                 <p>
-                    Private system where members can share information (text, photos and videos),
-                    manage their events and keep in touch.The system allows people to create profiles and groups.
-                    Members share contents to other members of their group or interact among each by instant
-                    messaging.
+                    <span ng-bind-html="project.cardContent"></span>
                 </p>
             </md-card-content>
             <md-card-actions layout="row" layout-align="end center">
-                <md-button href="https://github.com/mv740/POWON" class="md-icon-button" aria-label="Github">
-                    <md-icon md-svg-icon="assets/icons/githubLogo.svg"></md-icon>
-                </md-button>
-            </md-card-actions>
-        </md-card>
-        <md-card>
-            <md-card-header>
-                <md-card-avatar>
-                    <img src="assets/icons/java.svg">
-                </md-card-avatar>
-                <md-card-header-text>
-                    <span class="md-title">Java</span>
-                    <span class="md-subhead">Web Application</span>
-                </md-card-header-text>
-            </md-card-header>
-            <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Twibbler</span>
-                </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-                <p>
-                    It is a micro-blogging service that allows clients to register, view a web-accessible profile,
-                    post messages and subscribe to receive email notification of
-                    new messages posted by other registered clients.
-                </p>
-                <p>
-                    User can use a GUI client to interact with the system. He can also view information about each
-                    public user through a browser.
-                </p>
-            </md-card-content>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button  class="md-icon-button" aria-label="Github">
-                    <md-icon md-svg-icon="assets/icons/githubLogo.svg"></md-icon>
-                </md-button>
-            </md-card-actions>
-        </md-card>
-        <md-card>
-            <md-card-header>
-                <md-card-avatar>
-                    <img src="assets/icons/angular-icon.svg">
-                </md-card-avatar>
-                <md-card-header-text>
-                    <span class="md-title">Angular</span>
-                    <span class="md-subhead">Material</span>
-                </md-card-header-text>
-            </md-card-header>
-            <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Card header</span>
-                </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-                <p>
-                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                    two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-                </p>
-            </md-card-content>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button  class="md-icon-button" aria-label="Github">
-                    <md-icon md-svg-icon="assets/icons/githubLogo.svg"></md-icon>
+                <md-button href="{{project.buttonLink}}" class="md-icon-button" aria-label="{{vm.buttonLabel}}">
+                    <md-icon md-svg-icon="{{project.buttonIconUrl}}"></md-icon>
                 </md-button>
             </md-card-actions>
         </md-card>
