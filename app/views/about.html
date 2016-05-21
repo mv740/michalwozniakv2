@@ -1,13 +1,13 @@
 <div layout="row" layout-xs="column" layout-align="center" layout-wrap class="u-overflow-fix">
     <div class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
         <div>
-            <md-card style="width: 400px">
+            <md-card style="max-width: 400px">
                 <img src="{{vm.user.avatarImageUrl}}" class="md-user-avatar" alt="image caption">
                 <div style="position: relative">
                     <md-card-content>
                         <h2>{{vm.user.headerTitle}}</h2>
                         <p ng-bind-html="vm.user.content"></p>
-                        <md-button class="md-primary md-fab md-fab-top-right" style="margin-top: -50px">
+                        <md-button class="md-primary md-fab md-fab-top-right" style="margin-top: -50px" ng-click="vm.showPrompt($event)">
                             <md-icon md-font-icon="Material Icons">mail</md-icon>
                         </md-button>
                     </md-card-content>
@@ -18,23 +18,33 @@
                 </md-card-actions>
             </md-card>
         </div>
-        <div>
+        <div style="max-width: 700px">
             <md-card>
-
                 <md-card-content>
                     <h2>{{vm.education.headerTitle}}</h2>
-                    <md-list flex="">
+                    <md-list flex>
                         <md-list-item class="md-3-line" ng-repeat="item in vm.education.content">
                             <img ng-src="{{item.logo}}?{{$index}}" class="md-avatar icon-no-radius"
                                  alt="{{item.school}}">
-                            <div class="md-list-item-text" layout="column">
-                                <h3 class="education">{{ item.degree }}</h3>
+                            <div class="md-list-item-text" layout="column" layout-wrap>
+                                <p class="education">{{ item.degree }}</p>
                                 <h4>{{ item.school }}</h4>
                                 <p class="education-year">{{ item.year }}</p>
                             </div>
-                            <md-divider></md-divider>
                         </md-list-item>
                     </md-list>
+                </md-card-content>
+            </md-card>
+            <md-card>
+                <md-card-content>
+                    <h2>{{vm.skills.headerTitle}}</h2>
+                   <div layout="row" layout-align="space-around stretch" layout-wrap>
+                       <md-list ng-repeat="language in vm.skills.languages"  layout="row" layout-align="center">
+                          <md-list-item>
+                                  <img style="width:50px" ng-src="{{language.icon}}" alt="{{language.item}}"/>
+                          </md-list-item>
+                       </md-list>
+                   </div>
                 </md-card-content>
             </md-card>
         </div>

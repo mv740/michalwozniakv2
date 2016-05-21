@@ -50,9 +50,13 @@ md-list-item .md-avatar.icon-no-radius{
 /*
     bold education degree
 */
-md-list md-list-item.md-3-line .md-list-item-text h3.education {
-    font-weight: 500;
+
+md-list md-list-item.md-3-line .md-list-item-text p.education{
+    font-weight: bold;
+    color:black;
+    font-size: 100%;
 }
+
 
 md-list md-list-item.md-3-line .md-list-item-text p.education-year{
     font-style: italic;
