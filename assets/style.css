@@ -40,3 +40,21 @@ md-toolbar.md-extra-tall {
     max-height: 220px;
 }
 
+/*
+    icon doesn't have a circle radius
+*/
+md-list-item .md-avatar.icon-no-radius{
+    border-radius: 0;
+}
+
+/*
+    bold education degree
+*/
+md-list md-list-item.md-3-line .md-list-item-text h3.education {
+    font-weight: 500;
+}
+
+md-list md-list-item.md-3-line .md-list-item-text p.education-year{
+    font-style: italic;
+}
+

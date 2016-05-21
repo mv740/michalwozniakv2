@@ -20,7 +20,22 @@
 
         vm.education = {
             'headerTitle' : 'Education',
-            'content':'1111111111111111111111111111111111'
+            'content':[
+                {
+                    'degree': 'Bachelor of Engineering in Software Engineering',
+                    'school' : 'Concordia University',
+                    'logo':'assets/images/Concordia.jpg',
+                    'location': 'Montreal, Canada',
+                    'year': '2017'
+                },
+                {
+                    'degree': 'Diploma of Collegial Studies (D.E.C.), Pure and Applied Sciences',
+                    'school' : 'Collège de Maisonneuve',
+                    'logo':'assets/images/College_de_Maisonneuve.jpeg',
+                    'location': 'Montreal, Canada',
+                    'year': '2011'
+                }
+            ]
 
         }
             
