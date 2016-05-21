@@ -27,7 +27,8 @@
             .state('about', {
                 url: '/about',
                 templateUrl: 'app/views/about.html',
-                authenticate : false
+                authenticate : false,
+                controller: 'AboutController as vm'
             })
             .state('projects', {
                 url: '/projects',

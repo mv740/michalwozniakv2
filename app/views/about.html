@@ -1,6 +1,44 @@
-<div ng-controller="ContactController as vm">
-    <ng-map id="foo" default-style="true" lazy-init="true"
-            center="{{vm.stores.foo.position[0]}}, {{vm.stores.foo.position[1]}}" zoom="3">
+<div layout="row" layout-xs="column" layout-align="center" layout-wrap class="u-overflow-fix">
+    <div class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
+        <div>
+            <md-card style="width: 350px">
+                <img src="{{vm.user.avatarImageUrl}}" class="md-user-avatar" alt="image caption">
+                <div style="position: relative">
+                    <md-card-content>
+                        <h2>{{vm.user.headerTitle}}</h2>
+                        <p ng-bind-html="vm.user.content"></p>
+                        <md-button class="md-primary md-fab md-fab-top-right" style="margin-top: -50px">
+                            <md-icon md-font-icon="Material Icons">mail</md-icon>
+                        </md-button>
+                    </md-card-content>
+                </div>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>Action 1</md-button>
+                    <md-button>Action 2</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+        <div>
+            <md-card>
 
-    </ng-map>
+                <md-card-content>
+                    <h2>{{vm.education.headerTitle}}</h2>
+                    <p ng-bind-html="vm.education.content"></p>
+                    <md-list>
+                        <md-list-item>
+                            <div class="md-list-item-text">1234</div>
+                        </md-list-item>
+                        <md-list-item>12</md-list-item>
+                        <md-list-item>12</md-list-item>
+                    </md-list>
+                </md-card-content>
+
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>Action 1</md-button>
+                    <md-button>Action 2</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+
 </div>

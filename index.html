@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body ng-controller="HomeController" md-colors="{background: 'default-primary-50'}">
-
-<md-content>
-    <md-toolbar class="md-medium-tall">
+<div layout="column">
+    <md-toolbar class="md-extra-tall">
         <span class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()" hide-gt-md>
                 <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
@@ -24,54 +23,54 @@
             <span class="md-display-1">
                 Michal Wozniak
             </span>
-
         </span>
     </md-toolbar>
-</md-content>
-<div layout="row">
-    <md-sidenav md-colors="{background: 'default-primary-50'}" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-        <md-content md-colors="{background: 'default-primary-50'}" layout-padding layout="column" layout-align="space-between stretch">
-            <md-button ui-sref="partial1" ui-sref-active="md-raised md-primary">
-                <div flex-offset="30" align="left">
-                    <md-icon md-font-icon="Material Icons">home</md-icon>
-                    <span flex-offset="5">home</span>
-                </div>
-            </md-button>
-            <md-button ui-sref="about" ui-sref-active="md-raised md-primary">
-                <div flex-offset="30" align="left">
-                    <md-icon md-font-icon="Material Icons">person</md-icon>
-                    <span flex-offset="5">about</span>
-                </div>
-            </md-button>
-            <md-button ui-sref="projects" ui-sref-active="md-raised md-primary">
-                <div flex-offset="30" align="left">
-                    <md-icon md-font-icon="Material Icons">work</md-icon>
-                    <span flex-offset="5">projects</span>
-                </div>
-            </md-button>
-            <md-button ui-sref="homelab" ui-sref-active="md-raised md-primary">
-                <div flex-offset="30" align="left">
-                    <md-icon md-font-icon="Material Icons">person</md-icon>
-                    <span flex-offset="5">homelab</span>
-                </div>
-            </md-button>
-            <md-button ui-sref="contact" ui-sref-active="md-raised md-primary">
-                <div flex-offset="30" align="left">
-                    <md-icon md-font-icon="Material Icons">email</md-icon>
-                    <span flex-offset="5">contact</span>
-                </div>
-            </md-button>
+    <div layout="row">
+        <md-sidenav md-colors="{background: 'default-primary-50'}" class="md-sidenav-left" md-component-id="left"
+                    md-is-locked-open="$mdMedia('gt-md')">
+            <md-content md-colors="{background: 'default-primary-50'}" layout-padding layout="column"
+                        layout-align="space-between stretch">
+                <md-button ui-sref="partial1" ui-sref-active="md-raised md-primary">
+                    <div flex-offset="30" align="left">
+                        <md-icon md-font-icon="Material Icons">home</md-icon>
+                        <span flex-offset="5">home</span>
+                    </div>
+                </md-button>
+                <md-button ui-sref="about" ui-sref-active="md-raised md-primary">
+                    <div flex-offset="30" align="left">
+                        <md-icon md-font-icon="Material Icons">person</md-icon>
+                        <span flex-offset="5">about</span>
+                    </div>
+                </md-button>
+                <md-button ui-sref="projects" ui-sref-active="md-raised md-primary">
+                    <div flex-offset="30" align="left">
+                        <md-icon md-font-icon="Material Icons">work</md-icon>
+                        <span flex-offset="5">projects</span>
+                    </div>
+                </md-button>
+                <md-button ui-sref="homelab" ui-sref-active="md-raised md-primary">
+                    <div flex-offset="30" align="left">
+                        <md-icon md-font-icon="Material Icons">person</md-icon>
+                        <span flex-offset="5">homelab</span>
+                    </div>
+                </md-button>
+                <md-button ui-sref="contact" ui-sref-active="md-raised md-primary">
+                    <div flex-offset="30" align="left">
+                        <md-icon md-font-icon="Material Icons">email</md-icon>
+                        <span flex-offset="5">contact</span>
+                    </div>
+                </md-button>
+            </md-content>
+        </md-sidenav>
+
+        <md-content flex class="u-overflow-fix" md-colors="{background: 'default-primary-50'}">
+            <div layout-align="space-arround center">
+                <div ui-view></div>
+            </div>
+            <div flex></div>
         </md-content>
-    </md-sidenav>
-
-    <md-content flex md-colors="{background: 'default-primary-50'}">
-        <div layout-align="space-arround center">
-            <div ui-view></div>
-        </div>
-        <div flex></div>
-    </md-content>
+    </div>
 </div>
-
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-animate/angular-animate.js"></script>
 <script src="node_modules/angular-aria/angular-aria.js"></script>
@@ -87,5 +86,6 @@
 <script src="app/controllers/home.controller.js"></script>
 <script src="app/controllers/contact.controller.js"></script>
 <script src="app/controllers/projects.controller.js"></script>
+<script src="app/controllers/about.controller.js"></script>
 </body>
 </html>

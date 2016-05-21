@@ -22,3 +22,21 @@ https://www.google.com/design/spec/style/color.html#color-color-palette
 .backgroundColor{
     background-color: #E8EAF6!important;
 }
+
+md-card {
+    background: white;
+    position: relative;
+    top: -120px;
+    z-index: 2;
+}
+
+.u-overflow-fix {
+    overflow:visible;
+}
+
+md-toolbar.md-extra-tall {
+    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
+}
+

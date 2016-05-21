@@ -1,31 +1,33 @@
-<div layout="row" layout-xs="column"  layout-wrap>
-    <md-content class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}" ng-repeat="project in vm.projects">
-        <md-card md-whiteframe="3" style="width: 345px">
-            <md-card-header>
-                <md-card-avatar>
-                    <img src="{{project.avatarIconUrl}}">
-                </md-card-avatar>
-                <md-card-header-text>
-                    <span class="md-title">{{project.headerTitle}}</span>
-                    <span class="md-subhead">{{project.subhead}}</span>
-                </md-card-header-text>
-            </md-card-header>
-            <img ng-src="{{project.avatarImageUrl}}" class="md-card-image"  alt="Not found">
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">{{project.cardTitle}}</span>
-                </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-                <p>
-                    <span ng-bind-html="project.cardContent"></span>
-                </p>
-            </md-card-content>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button href="{{project.buttonLink}}" class="md-icon-button" aria-label="{{vm.buttonLabel}}">
-                    <md-icon md-svg-icon="{{project.buttonIconUrl}}"></md-icon>
-                </md-button>
-            </md-card-actions>
-        </md-card>
+
+    <md-content class="md-padding u-overflow-fix" layout="row" layout-xs="column" layout-align="center" layout-wrap md-colors="{background: 'default-primary-50'}">
+        <div ng-repeat="project in vm.projects">
+                <md-card md-whiteframe="3" style="width: 345px">
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img src="{{project.avatarIconUrl}}">
+                        </md-card-avatar>
+                        <md-card-header-text>
+                            <span class="md-title">{{project.headerTitle}}</span>
+                            <span class="md-subhead">{{project.subhead}}</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <img ng-src="{{project.avatarImageUrl}}" class="md-card-image"  alt="Not found">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{project.cardTitle}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <p>
+                            <span ng-bind-html="project.cardContent"></span>
+                        </p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button href="{{project.buttonLink}}" class="md-icon-button" aria-label="{{vm.buttonLabel}}">
+                            <md-icon md-svg-icon="{{project.buttonIconUrl}}"></md-icon>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </div>
     </md-content>
-</div>
