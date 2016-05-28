@@ -1,37 +1,55 @@
-<div layout="row" layout-xs="column">
-    <div md-whiteframe="3" layout-margin="10" flex="60">
-        <div>
-            <div flex-offset="5" class="md-display-2">CONTACT</div>
-        </div>
-        <ng-map center="45.497395, -73.579036" zoom="15" tilt="45"></ng-map>
-        <md-content>
-            blabla
-        </md-content>
-    </div>
-    <div md-whiteframe="3" flex="20" layout-margin="10">
-        <div flex layout="row" layout-align="center center">
-            <md-content class="md-padding">
-                <form name="contactForm" data-ng-submit="sendMail()">
-                    <md-input-container>
-                        <label>Name:</label>
-                        <input ng-model="contactName" required>
-                    </md-input-container>
-                    <md-input-container flex>
-                        <label>Email:</label>
-                        <input type="email" ng-model="contactEmail" required>
-                    </md-input-container>
+<div layout="row" layout-xs="column" layout-align="center" layout-wrap class="u-overflow-fix">
+    <div class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
+        <div style="max-width: 700px">
+            <div md-whiteframe="2" class="frameCard">
+                <div style="display: block;padding: 16px">
+                    <h2>{{vm.headerTitle}}</h2>
+                </div>
+                <div>
+                    <ng-map style="margin-top: -16px" center="45.497395, -73.579036" zoom="15" tilt="45"></ng-map>
+                    <p style="display: block;padding: 16px">
 
-                    <md-input-container>
-                        <label>Message:</label>
-                        <textarea ng-model="contactMsg" columns="1" md-maxlength="150" required></textarea>
-                    </md-input-container>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Misa cumque aliquid laborum dolorem maiores.
 
-                    <md-button type="submit" class="md-primary"
-                               ng-class="{'md-raised': (contactForm.$dirty && contactForm.$valid) }"
-                               aria-label="Save Project">Send
-                    </md-button>
-                </form>
-            </md-content>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, laudantium aliquam eligendi excepturi officia nostrum nihil odio veniam iste quia itaque earum consequatur
+
+                        repellat perferendis corporis, quibusdam vitae ipsam. Mollitia.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="max-width: 700px">
+            <md-card>
+                <md-card-content>
+                    <h2>{{vm.headerTitle2}}</h2>
+                    <div flex layout="row" layout-align="center center"  layout-fill>
+                        <md-content class="md-padding" layout-fill>
+                            <form name="contactForm">
+                                <md-input-container class="md-block">
+                                    <label>Name:</label>
+                                    <input ng-model="vm.items.contactName" required>
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>Email:</label>
+                                    <input type="email" ng-model="vm.items.contactEmail" required>
+                                </md-input-container>
+
+                                <md-input-container  class="md-block" >
+                                    <label>Message:</label>
+                                    <textarea ng-model="vm.item.contactMsg"  md-maxlength="250" required></textarea>
+                                </md-input-container>
+
+                                <md-button ng-click="contactForm.$dirty && contactForm.$valid && vm.submit(vm.items)" class="md-primary"
+                                           ng-class="{'md-raised': (contactForm.$dirty && contactForm.$valid)}"
+                                           ng-disabled="(!contactForm.$valid)"
+                                           aria-label="submit">Send
+                                </md-button>
+                            </form>
+                        </md-content>
+                    </div>
+                </md-card-content>
+            </md-card>
         </div>
     </div>
+
 </div>

@@ -1,7 +1,7 @@
 
-    <md-content class="md-padding u-overflow-fix" layout="row" layout-xs="column" layout-align="center" layout-wrap md-colors="{background: 'default-primary-50'}">
-        <div ng-repeat="project in vm.projects">
-                <md-card md-whiteframe="3" style="width: 345px">
+    <md-content class="md-padding u-overflow-fix" layout="row" flex layout-xs="column" layout-align="center" layout-wrap md-colors="{background: 'default-primary-50'}">
+        <div ng-repeat="project in vm.projects" layout="row" layout-align="center">
+                <md-card md-whiteframe="3" style="width: 350px;">
                     <md-card-header>
                         <md-card-avatar>
                             <img src="{{project.avatarIconUrl}}">

@@ -36,11 +36,6 @@
                 authenticate : false,
                 controller: 'ProjectsController as vm'
             })
-            .state('homelab', {
-                url: '/homelab',
-                templateUrl: 'app/views/homelab.html',
-                authenticate : false
-            })
             .state('contact', {
                 url: '/contact',
                 templateUrl: 'app/views/contact.html',

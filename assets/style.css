@@ -62,3 +62,12 @@ md-list md-list-item.md-3-line .md-list-item-text p.education-year{
     font-style: italic;
 }
 
+.frameCard {
+    background: white;
+    position: relative;
+    top: -122px;
+    z-index: 2;
+    border-radius: 2px;
+    display: block;
+    margin: 10px;
+}

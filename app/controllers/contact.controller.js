@@ -14,6 +14,8 @@
         var googleApiKey = "AIzaSyAcAkK0gU63uwHLAllZb6UuwK6mVHD6e3w";
         vm.googleMapsUrl= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAcAkK0gU63uwHLAllZb6UuwK6mVHD6e3w";
 
+        vm.headerTitle = "Contact";
+
     }
 
 
