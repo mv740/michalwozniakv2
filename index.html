@@ -21,10 +21,25 @@
             <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()" hide-gt-md>
                 <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
             </md-button>
-            <span class="md-display-1">
+            <span class="md-display-1" hide-gt-md>
                 Michal Wozniak
             </span>
         </span>
+        <md-sidenav md-is-locked-open="$mdMedia('gt-md')" class="md-sidenav-left" style="background: transparent; margin-top: -50px">
+            <div layout="column" layout-align="center center">
+                <div layout="column" layout-align="center center">
+                    <div>
+                        <img style="width: 125px; border-radius: 50%" class="md-user-avatar" src="assets/images/michalwozniak_avatar.png">
+                    </div>
+                    <div style="margin-top: -20px">
+                        <h1 class="md-display-1">Michal Wozniak</h1>
+                    </div>
+                </div>
+                <div style="margin-top: -40px">
+                    <p class="md-body-2" style="font-size: 18px">Software Developer</p>
+                </div>
+            </div>
+        </md-sidenav>
     </md-toolbar>
     <div layout="row">
         <md-sidenav md-colors="{background: 'default-primary-50'}" class="md-sidenav-left" md-component-id="left"
@@ -57,7 +72,6 @@
                 </md-button>
             </md-content>
         </md-sidenav>
-
         <md-content flex class="u-overflow-fix" md-colors="{background: 'default-primary-50'}">
             <div layout-align="space-arround center">
                 <div ui-view></div>
