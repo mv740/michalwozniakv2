@@ -5,5 +5,5 @@
 (function () {
     'use strict';
 
-    angular.module('app',['ui.router','ngAria','ngMaterial','ngMap','ngSanitize']);
+    angular.module('app',['ui.router','ngAria','ngMaterial','ngMap','ngSanitize','ngImageAppear']);
 })();

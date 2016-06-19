@@ -19,11 +19,6 @@
                 templateUrl: 'app/views/partial1.html',
                 authenticate: false
             })
-            .state('state2', {
-                url: '/state2',
-                templateUrl: 'app/views/partial2.html',
-                authenticate : false
-            })
             .state('about', {
                 url: '/about',
                 templateUrl: 'app/views/about.html',

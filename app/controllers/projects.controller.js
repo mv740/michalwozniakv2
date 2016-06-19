@@ -13,7 +13,7 @@
                 'headerTitle' : 'Java',
                 'subhead': 'Android application',
                 'avatarIconUrl': 'assets/icons/Android_robot.svg',
-                'avatarImageUrl': 'assets/images/EWOK.png',
+                'avatarImageUrl': 'assets/images/test.png',
                 'cardTitle': 'Virtual Museum Guide',
                 'cardContent': 'Android application that helps users explore the museum and its exhibitions. <ul><li>Indoor Offline map</li> <li>Estimote Beacon technology</li></ul> ',
                 'buttonIconUrl': 'assets/icons/githubLogo.svg',
@@ -37,9 +37,20 @@
                 'avatarIconUrl': 'assets/icons/nodejs.svg',
                 'avatarImageUrl': 'assets/images/myDashboardBeta.png',
                 'cardTitle': 'HomeAutomationDashboard',
-                'cardContent': 'Home Dashboard made to keep me update on all my service running on my server. I created a service to easily communicate with the PRTG API<br/><br/><ul><li>CPU/MEMORY/Disk usage with progress bar</li><li>Colored Service Tiles for fast notification</li><li>Particule Temperature Monitor</li></ul><br><br>' ,
+                'cardContent': 'Home Dashboard made to keep me update on all my service running on my server. I created a service to easily communicate with the PRTG API<br/><br/>We can track the cpu/ram/disk usage of each of my virtual machines.<br>' ,
                 'buttonIconUrl': 'assets/icons/githubLogo.svg',
                 'buttonLink': 'https://github.com/mv740/POWON',
+                'buttonLabel' :'Github'
+            },
+            {
+                'headerTitle' : 'HTML/CSS',
+                'subhead': 'Portfolio Website ',
+                'avatarIconUrl': 'assets/icons/Windows_2012.svg',
+                'avatarImageUrl': 'assets/images/michalwozniakv1.png',
+                'cardTitle': 'michalwozniak.ca V1',
+                'cardContent': 'It was first time trying to build a portfolio Website. I really liked the Metro Design, thus I used the Metro UI CSS Framework to design it.  To make it mobile friendly, I tried to make it look like exactly like a Windows Phone layout.',
+                'buttonIconUrl': 'assets/icons/githubLogo.svg',
+                'buttonLink': '',
                 'buttonLabel' :'Github'
             },
             {
@@ -48,7 +59,7 @@
                 'avatarIconUrl': 'assets/icons/java.svg',
                 'avatarImageUrl': 'assets/images/twibblerClient.png',
                 'cardTitle': 'Twibbler',
-                'cardContent': 'It is a micro-blogging service that allows clients to register, view a web-accessible profile, post messages and subscribe to receive email notification of new messages posted by other registered clients. <br/><br/> User can use a GUI client to interact with the system. He can also view information about each public user through a browser.<br><br>',
+                'cardContent': 'It is a micro-blogging service that allows clients to register, view a web-accessible profile, post messages and subscribe to receive email notification of new messages posted by other registered clients. <br/><br/>',
                 'buttonIconUrl': 'assets/icons/githubLogo.svg',
                 'buttonLink': '',
                 'buttonLabel' :'Github'
@@ -57,9 +68,9 @@
                 'headerTitle' : 'C++',
                 'subhead': 'Embedded system',
                 'avatarIconUrl': 'assets/icons/particule.png',
-                'avatarImageUrl': 'assets/images/poolSensor.jpg',
+                'avatarImageUrl': 'assets/images/sensor.png',
                 'cardTitle': 'Temperature Monitor',
-                'cardContent': 'Monitor your pool\'s water temperature.<br/> <br/>  Display the temperature on a small LCD display.',
+                'cardContent': 'Monitor your pool\'s water temperature.<br/> <br/>  Display the temperature on a small LCD display. User can also view the temperature on a website where it is always keep up to data',
                 'buttonIconUrl': 'assets/icons/githubLogo.svg',
                 'buttonLink': 'https://github.com/mv740/HomeAutomationDashboard',
                 'buttonLabel' :'Github'
@@ -70,7 +81,7 @@
                 'avatarIconUrl': 'assets/icons/csharp.png',
                 'avatarImageUrl': 'assets/images/dreamSchedule.png',
                 'cardTitle': 'DreamScheduler',
-                'cardContent': 'A system designed to automate readjustments to the departmental sequences and optimize the resulting sequences to meet any special needs of the user <br/><br> Student can create a custom sequence based on their current academic record',
+                'cardContent': 'A system designed to automate readjustments to the departmental sequences and optimize the resulting sequences to meet any special needs of the user',
                 'buttonIconUrl': 'assets/icons/githubLogo.svg',
                 'buttonLink': '',
                 'buttonLabel' :'Github'
@@ -81,7 +92,7 @@
                 'avatarIconUrl': 'assets/icons/codeigniter.svg',
                 'avatarImageUrl': 'assets/images/powonHome.png',
                 'cardTitle': 'Powon',
-                'cardContent': 'Private system where members can share information (text, photos and videos), manage their events and keep in touch.<br/><br/><br/>The system allows people to create profiles and groups. Members share contents to other members of their group or interact among each by instant messaging.<br><br>',
+                'cardContent': 'Private system where members can share information (text, photos and videos), manage their events and keep in touch.<br/><br/>The system allows people to create profiles and groups. Members share contents to other members of their group or interact among each by instant messaging.',
                 'buttonIconUrl': 'assets/icons/githubLogo.svg',
                 'buttonLink': 'https://github.com/mv740/POWON',
                 'buttonLabel' :'Github'
@@ -90,7 +101,7 @@
                 'headerTitle' : 'C#',
                 'subhead': 'Windows phone 8 application',
                 'avatarIconUrl': 'assets/icons/Windows_2012.svg',
-                'avatarImageUrl': 'assets/images/converterCalculator.png',
+                'avatarImageUrl': 'assets/images/calculator.png',
                 'cardTitle': 'Calculator',
                 'cardContent': 'Calculator the provides basic arithmetic functions. It also contain a binary converter to hexadecimal and decimal.',
                 'buttonIconUrl': 'assets/icons/githubLogo.svg',

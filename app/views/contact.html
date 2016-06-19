@@ -1,29 +1,23 @@
-<div layout="row" layout-xs="column" layout-align="center" layout-wrap class="u-overflow-fix">
+<div layout="row" layout-xs="column" layout-align="center" layout-wrap class="u-overflow-fix contentContainer">
     <div class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
         <div style="max-width: 700px">
             <div md-whiteframe="2" class="frameCard">
                 <div style="display: block;padding: 16px">
                     <h2>{{vm.headerTitle}}</h2>
                 </div>
-                <div>
+                <div style="display: table">
                     <ng-map style="margin-top: -16px" center="45.497395, -73.579036" zoom="15" tilt="45"></ng-map>
-                    <p style="display: block;padding: 16px">
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Misa cumque aliquid laborum dolorem maiores.
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, laudantium aliquam eligendi excepturi officia nostrum nihil odio veniam iste quia itaque earum consequatur
-
-                        repellat perferendis corporis, quibusdam vitae ipsam. Mollitia.
+                    <p class="" style="display: block;padding: 16px">
+                        {{vm.message}}
                     </p>
                 </div>
             </div>
         </div>
         <div style="max-width: 700px">
-            <md-card>
-                <md-card-content>
-                    <h2>{{vm.headerTitle2}}</h2>
+            <div md-whiteframe="2" class="frameCard" style="min-width: 350px">
+                <div style="display: table" layout-fill>
                     <div flex layout="row" layout-align="center center"  layout-fill>
-                        <md-content class="md-padding" layout-fill>
+                        <md-content class="md-padding white" layout-fill>
                             <form name="contactForm">
                                 <md-input-container class="md-block">
                                     <label>Name:</label>
@@ -34,12 +28,12 @@
                                     <input type="email" ng-model="vm.items.contactEmail" required>
                                 </md-input-container>
 
-                                <md-input-container  class="md-block" >
+                                <md-input-container class="md-block">
                                     <label>Message:</label>
-                                    <textarea ng-model="vm.item.contactMsg"  md-maxlength="250" required></textarea>
+                                    <textarea ng-model="vm.item.contactMsg"  md-maxlength="250" maxlength="250" required></textarea>
                                 </md-input-container>
 
-                                <md-button ng-click="contactForm.$dirty && contactForm.$valid && vm.submit(vm.items)" class="md-primary"
+                                <md-button ng-click="contactForm.$dirty && contactForm.$valid && vm.submit(vm.items)" class="md-primary md-raised"
                                            ng-class="{'md-raised': (contactForm.$dirty && contactForm.$valid)}"
                                            ng-disabled="(!contactForm.$valid)"
                                            aria-label="submit">Send
@@ -47,8 +41,9 @@
                             </form>
                         </md-content>
                     </div>
-                </md-card-content>
-            </md-card>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,7 +1,7 @@
-<div layout="row" layout-xs="column" layout-align="center" layout-wrap class="u-overflow-fix">
+<div layout="row" layout-xs="column" layout-align="center center" layout-wrap class="u-overflow-fix contentContainer">
     <div class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
         <div>
-            <md-card style="max-width: 400px">
+            <md-card style="max-width: 420px">
                 <img src="{{vm.user.avatarImageUrl}}" class="md-user-avatar" alt="image caption">
                 <div style="position: relative">
                     <md-card-content>
@@ -12,20 +12,36 @@
                         </md-button>
                     </md-card-content>
                 </div>
-                <md-card-actions layout="row" layout-align="end center">
-                    <md-button>Action 1</md-button>
-                    <md-button>Action 2</md-button>
-                </md-card-actions>
             </md-card>
         </div>
         <div style="max-width: 700px">
             <md-card>
-                <md-card-content>
+                <div class="md-card-contentCustom">
+                    <h2>{{vm.work.headerTitle}}</h2>
+                    <md-list flex>
+                        <md-list-item class="md-3-line" ng-repeat="item in vm.work.content">
+                            <a href="{{item.orgLink}}">
+                                <img ng-src="{{item.logo}}?{{$index}}" class="md-avatar icon-no-radius"
+                                 alt="{{item.organization}}">
+                            </a>
+                            <div class="md-list-item-text" layout="column" layout-wrap>
+                                <p class="education">{{ item.jobTitle }}</p>
+                                <h4>{{ item.organization }}</h4>
+                                <p class="education-year">{{ item.time }}</p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </md-card>
+            <md-card>
+                <div class="md-card-contentCustom">
                     <h2>{{vm.education.headerTitle}}</h2>
                     <md-list flex>
                         <md-list-item class="md-3-line" ng-repeat="item in vm.education.content">
-                            <img ng-src="{{item.logo}}?{{$index}}" class="md-avatar icon-no-radius"
-                                 alt="{{item.school}}">
+                            <a href="{{item.link}}">
+                                <img ng-src="{{item.logo}}?{{$index}}" class="md-avatar icon-no-radius"
+                                     alt="{{item.school}}">
+                            </a>
                             <div class="md-list-item-text" layout="column" layout-wrap>
                                 <p class="education">{{ item.degree }}</p>
                                 <h4>{{ item.school }}</h4>
@@ -33,21 +49,49 @@
                             </div>
                         </md-list-item>
                     </md-list>
-                </md-card-content>
+                </div>
+            </md-card>
+        </div>
+        <div style="max-width: 700px">
+            <md-card>
+                <div class="md-card-contentCustom">
+                    <h2>{{vm.skills.language.title}}</h2>
+                    <div layout="row" layout-align="space-around stretch" layout-wrap>
+                        <md-list ng-repeat="language in vm.skills.language.items"  layout="row" layout-align="center">
+                            <md-list-item>
+                                <img style="width:50px" ng-src="{{language.icon}}" alt="{{language.item}}"/>
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </div>
             </md-card>
             <md-card>
-                <md-card-content>
-                    <h2>{{vm.skills.headerTitle}}</h2>
-                   <div layout="row" layout-align="space-around stretch" layout-wrap>
-                       <md-list ng-repeat="language in vm.skills.languages"  layout="row" layout-align="center">
-                          <md-list-item>
-                                  <img style="width:50px" ng-src="{{language.icon}}" alt="{{language.item}}"/>
-                          </md-list-item>
-                       </md-list>
-                   </div>
-                </md-card-content>
+                <div class="md-card-contentCustom">
+                    <h2>{{vm.skills.framework.title}}</h2>
+                    <div layout="row" layout-align="space-around stretch" layout-wrap>
+                        <md-list ng-repeat="language in vm.skills.framework.items"  layout="row" layout-align="center">
+                            <md-list-item>
+                                <img style="width:50px" ng-src="{{language.icon}}" alt="{{language.item}}"/>
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </div>
+            </md-card>
+            <md-card>
+                <div class="md-card-contentCustom">
+                    <h2>{{vm.skills.data.title}}</h2>
+                    <div layout="row" layout-align="space-around stretch" layout-wrap>
+                        <md-list ng-repeat="language in vm.skills.data.items"  layout="row" layout-align="center">
+                            <md-list-item>
+                                <img style="width:75px" ng-src="{{language.icon}}" alt="{{language.item}}"/>
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </div>
             </md-card>
         </div>
     </div>
-
 </div>
+<md-button hide-xs class="md-primary md-fab" style="position: fixed;bottom: 10px;right:10px;"  href="{{vm.user.buttonLink}}">
+    <md-icon md-font-icon="Material Icons">file_download</md-icon>
+</md-button>
