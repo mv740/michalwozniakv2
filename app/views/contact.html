@@ -1,7 +1,10 @@
 <div layout="row" layout-xs="column" layout-align="center" layout-wrap class="u-overflow-fix contentContainer">
     <div class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
         <div style="max-width: 700px">
-            <div md-whiteframe="2" class="frameCard">
+            <div md-whiteframe="2" class="frameCard"
+                 ng-class="{'md-whiteframe-10dp': map}"
+                 ng-mouseenter="map = true"
+                 ng-mouseleave="map = false">
                 <div style="display: block;padding: 16px">
                     <h2>{{vm.headerTitle}}</h2>
                 </div>
@@ -14,7 +17,10 @@
             </div>
         </div>
         <div style="max-width: 700px">
-            <div md-whiteframe="2" class="frameCard" style="min-width: 350px">
+            <div md-whiteframe="2" class="frameCard" style="min-width: 350px"
+                 ng-class="{'md-whiteframe-10dp': CONTACT}"
+                 ng-mouseenter="CONTACT = true"
+                 ng-mouseleave="CONTACT = false">
                 <div style="display: table" layout-fill>
                     <div flex layout="row" layout-align="center center"  layout-fill>
                         <md-content class="md-padding white" layout-fill>

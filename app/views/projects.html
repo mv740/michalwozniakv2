@@ -2,7 +2,10 @@
     <md-content class="md-padding u-overflow-fix" layout="row" flex layout-xs="column" layout-align="center" layout-wrap
                 md-colors="{background: 'default-primary-50'}">
         <div ng-repeat="project in vm.projects" layout="row" layout-align="center">
-            <md-card md-whiteframe="3" style="width: 350px;">
+            <md-card style="width: 350px;"
+                     ng-class="{'md-whiteframe-10dp': hover}"
+                     ng-mouseenter="hover = true"
+                     ng-mouseleave="hover = false">
                 <md-card-header>
                     <md-card-avatar>
                         <img src="{{project.avatarIconUrl}}">

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body ng-controller="HomeController as vm" md-colors="{background: 'default-primary-50'}">
+<body md-colors="{background: 'default-primary-50'}">
 <div layout="column">
     <md-toolbar class="md-extra-tall">
         <span class="md-toolbar-tools">
@@ -25,7 +25,7 @@
                 Michal Wozniak
             </span>
             <span flex="10" hide-gt-xs></span>
-            <span flex="65" hide-xs></span>
+            <span flex="85" hide-xs></span>
 
             <span ng-repeat="item in vm.links">
                 <md-button class="md-icon-button" aria-label="{{item.label}}" href="{{item.link}}">
@@ -38,10 +38,11 @@
                     style="background: transparent; margin-top: -50px">
             <div layout="column" layout-align="center center">
                 <div layout="column" layout-align="center center">
-                    <div>
-                        <img style="width: 125px; border-radius: 50%" class="md-user-avatar"
-                             src="assets/images/michalwozniak_avatar.png">
+                    <div ng-if="$root.ShowAvatar">
+                        <img style="width: 115px; border-radius: 50%" class="md-user-avatar"
+                             src="assets/images/avatar.png">
                     </div>
+                    <div ng-if="!$root.ShowAvatar" style="margin-top: 50px"></div>
                     <div style="margin-top: -20px">
                         <h1 class="md-display-1">Michal Wozniak</h1>
                     </div>
@@ -57,7 +58,7 @@
                     md-is-locked-open="$mdMedia('gt-md')">
             <md-content md-colors="{background: 'default-primary-50'}" layout-padding layout="column"
                         layout-align="space-between stretch">
-                <md-button ui-sref="partial1" ui-sref-active="md-raised md-primary">
+                <md-button ui-sref="home" ui-sref-active="md-raised md-primary">
                     <div flex-offset="30" align="left">
                         <md-icon md-font-icon="Material Icons">home</md-icon>
                         <span flex-offset="5">home</span>

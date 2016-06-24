@@ -1,21 +1,9 @@
 <div layout="row" layout-xs="column" layout-align="center center" layout-wrap class="u-overflow-fix contentContainer">
     <div class="md-padding" layout-xs="column" layout="row" md-colors="{background: 'default-primary-50'}">
-        <div>
-            <md-card style="max-width: 420px">
-                <img src="{{vm.user.avatarImageUrl}}" class="md-user-avatar" alt="image caption">
-                <div style="position: relative">
-                    <md-card-content>
-                        <h2>{{vm.user.headerTitle}}</h2>
-                        <p ng-bind-html="vm.user.content"></p>
-                        <md-button class="md-primary md-fab md-fab-top-right" style="margin-top: -50px" ng-click="vm.showPrompt($event)">
-                            <md-icon md-font-icon="Material Icons">mail</md-icon>
-                        </md-button>
-                    </md-card-content>
-                </div>
-            </md-card>
-        </div>
         <div style="max-width: 700px">
-            <md-card>
+            <md-card ng-class="{'md-whiteframe-10dp': experience}"
+                     ng-mouseenter="experience = true"
+                     ng-mouseleave="experience = false">
                 <div class="md-card-contentCustom">
                     <h2>{{vm.work.headerTitle}}</h2>
                     <md-list flex>
@@ -33,12 +21,14 @@
                     </md-list>
                 </div>
             </md-card>
-            <md-card>
+            <md-card ng-class="{'md-whiteframe-10dp': education}"
+                     ng-mouseenter="education = true"
+                     ng-mouseleave="education = false">
                 <div class="md-card-contentCustom">
                     <h2>{{vm.education.headerTitle}}</h2>
                     <md-list flex>
                         <md-list-item class="md-3-line" ng-repeat="item in vm.education.content">
-                            <a href="{{item.link}}">
+                            <a href="{{vm.item.link}}">
                                 <img ng-src="{{item.logo}}?{{$index}}" class="md-avatar icon-no-radius"
                                      alt="{{item.school}}">
                             </a>
@@ -53,31 +43,43 @@
             </md-card>
         </div>
         <div style="max-width: 700px">
-            <md-card>
+            <md-card ng-class="{'md-whiteframe-10dp': language}"
+                     ng-mouseenter="language = true"
+                     ng-mouseleave="language = false">
                 <div class="md-card-contentCustom">
                     <h2>{{vm.skills.language.title}}</h2>
                     <div layout="row" layout-align="space-around stretch" layout-wrap>
                         <md-list ng-repeat="language in vm.skills.language.items"  layout="row" layout-align="center">
                             <md-list-item>
+                                <md-tooltip md-direction="bottom">
+                                   {{language.item}}
+                                </md-tooltip>
                                 <img style="width:50px" ng-src="{{language.icon}}" alt="{{language.item}}"/>
                             </md-list-item>
                         </md-list>
                     </div>
                 </div>
             </md-card>
-            <md-card>
+            <md-card ng-class="{'md-whiteframe-10dp': framework}"
+                     ng-mouseenter="framework = true"
+                     ng-mouseleave="framework = false">
                 <div class="md-card-contentCustom">
                     <h2>{{vm.skills.framework.title}}</h2>
                     <div layout="row" layout-align="space-around stretch" layout-wrap>
                         <md-list ng-repeat="language in vm.skills.framework.items"  layout="row" layout-align="center">
                             <md-list-item>
+                                <md-tooltip md-direction="bottom">
+                                    {{language.item}}
+                                </md-tooltip>
                                 <img style="width:50px" ng-src="{{language.icon}}" alt="{{language.item}}"/>
                             </md-list-item>
                         </md-list>
                     </div>
                 </div>
             </md-card>
-            <md-card>
+            <md-card ng-class="{'md-whiteframe-10dp': data}"
+                     ng-mouseenter="data = true"
+                     ng-mouseleave="data = false">
                 <div class="md-card-contentCustom">
                     <h2>{{vm.skills.data.title}}</h2>
                     <div layout="row" layout-align="space-around stretch" layout-wrap>

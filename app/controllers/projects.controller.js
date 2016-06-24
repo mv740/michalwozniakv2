@@ -5,8 +5,12 @@
     angular.module('app')
         .controller('ProjectsController', ProjectsController);
 
-    function ProjectsController() {
+    ProjectsController.$inject = ['$rootScope']; 
+
+    function ProjectsController($rootScope) {
         var vm = this;
+
+        $rootScope.ShowAvatar = true;
 
         vm.projects = [
             {

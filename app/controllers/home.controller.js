@@ -8,9 +8,11 @@
         .module('app')
         .controller('HomeController', HomeController );
 
-    HomeController.$inject = ['$mdSidenav'];
-    function HomeController($mdSidenav) {
+    HomeController.$inject = ['$mdSidenav','$mdDialog','$rootScope'];
+    function HomeController($mdSidenav,$mdDialog,$rootScope) {
         var vm = this;
+
+        $rootScope.ShowAvatar = false;
 
         vm.toggleLeft = function () {
             $mdSidenav('left').toggle();
@@ -34,7 +36,40 @@
             }
         ];
 
-    }
-    
+        vm.user =
+        {
+            'headerTitle': 'About me',
+            'avatarImageUrl': 'assets/images/michalwozniak_avatar.png',
+            'content': 'My name is Michal, I am currently completing my Bachelor of Software Engineering at Concordia University in Montreal, Canada.<br/><br/> When I\'m not coding something, I will be having some fun with my Arduino or raspberry pie or maybe some amazing gadget found on Kickstarter. In my spare time, I enjoy going to the gym.',
+            'buttonLabel': 'Resume',
+            'buttonLink' :'https://resume.creddle.io/resume/25ohmz2xruh'
+        };
 
+        vm.showPrompt = function showDialog($event) {
+            var parentEl = angular.element(document.body);
+            $mdDialog.show({
+                parent: parentEl,
+                targetEvent: $event,
+                templateUrl: 'app/views/partial/contactDialog.html',
+                locals: {
+                    items: vm.items
+                },
+                controller: DialogController,
+                controllerAs: 'vm',
+                clickOutsideToClose:true,
+                bindToController: true
+            });
+            function DialogController($mdDialog, items) {
+                var vm = this;
+                vm.items = items;
+                vm.submit = function () {
+                    console.log(vm.items)
+                };
+                vm.closeDialog = function() {
+                    $mdDialog.hide();
+                }
+            }
+        }
+
+    }
 })();

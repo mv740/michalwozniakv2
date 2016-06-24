@@ -12,7 +12,7 @@
     function configureTheme($mdThemingProvider) {
 
         $mdThemingProvider.theme('default')
-            .primaryPalette('indigo')
+            .primaryPalette('teal')
             .accentPalette('pink')
             .warnPalette('red')
             .backgroundPalette('grey');

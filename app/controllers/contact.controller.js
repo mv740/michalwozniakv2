@@ -8,12 +8,12 @@
         .module('app')
         .controller('ContactController', ContactController );
 
-    ContactController.$inject = ['NgMap'];
-    function ContactController(NgMap) {
+    ContactController.$inject = ['$rootScope'];
+    function ContactController($rootScope) {
         var vm = this;
-        var googleApiKey = "AIzaSyAcAkK0gU63uwHLAllZb6UuwK6mVHD6e3w";
-        vm.googleMapsUrl= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAcAkK0gU63uwHLAllZb6UuwK6mVHD6e3w";
 
+        $rootScope.ShowAvatar = true;
+        
         vm.headerTitle = "Let's Get In Touch";
         
         vm.message = "Use the contact form to get in touch, I will reply as soon as possible";

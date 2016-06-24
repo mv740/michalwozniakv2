@@ -5,7 +5,10 @@
     
     angular
         .module('app')
-        .config(config);
+        .config(config)
+        .run(function ($rootScope) {
+            $rootScope.ShowAvatar = false;
+        });
     
     config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
@@ -14,10 +17,11 @@
         $urlRouterProvider.otherwise('/');
         //routing
         $stateProvider
-            .state('partial1', {
+            .state('home', {
                 url: '/',
-                templateUrl: 'app/views/partial1.html',
-                authenticate: false
+                templateUrl: 'app/views/home.html',
+                authenticate: false,
+                controller: 'HomeController as vm'
             })
             .state('about', {
                 url: '/about',
