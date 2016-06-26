@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body md-colors="{background: 'default-primary-50'}">
-<div layout="column" ng-controller="ToolBarController as vm">
+<div layout="column" ng-controller="ToolBarController as vm" md-swipe-right="vm.onSwipeRight()">
     <md-toolbar class="md-extra-tall">
         <span class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Settings" ng-click="vm.toggleLeft()" hide-gt-md>
@@ -55,7 +55,7 @@
     </md-toolbar>
     <div layout="row">
         <md-sidenav md-colors="{background: 'default-primary-50'}" class="md-sidenav-left" md-component-id="left"
-                    md-is-locked-open="$mdMedia('gt-md')">
+                    md-is-locked-open="$mdMedia('gt-md')" md-swipe-left="vm.onSwipeLeft()">
             <md-content md-colors="{background: 'default-primary-50'}" layout-padding layout="column"
                         layout-align="space-between stretch">
                 <md-button ui-sref="home" ui-sref-active="md-raised md-primary" ng-click="vm.close()">
@@ -84,7 +84,9 @@
                 </md-button>
             </md-content>
         </md-sidenav>
-        <md-content flex class="u-overflow-fix" md-colors="{background: 'default-primary-50'}">
+        <md-content
+                flex class="u-overflow-fix"
+                md-colors="{background: 'default-primary-50'}">
             <div layout-align="space-arround center">
                 <div ui-view></div>
             </div>

@@ -20,5 +20,12 @@
         vm.close = function() {
             $mdSidenav('left').close();
         };
+
+        vm.onSwipeRight = function () {
+            $mdSidenav('left').open();
+        };
+        vm.onSwipeLeft = function () {
+            vm.close();
+        };
     }
 })();

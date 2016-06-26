@@ -5,10 +5,7 @@
     
     angular
         .module('app')
-        .config(config)
-        .run(function ($rootScope) {
-            $rootScope.ShowAvatar = false;
-        });
+        .config(config);
     
     config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
