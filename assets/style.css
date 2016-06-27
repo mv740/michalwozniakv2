@@ -30,7 +30,7 @@ md-card {
 }
 
 .u-overflow-fix {
-    overflow:visible;
+    overflow:visible !important;
 }
 
 md-toolbar.md-extra-tall {
@@ -81,4 +81,11 @@ div.contentContainer {
 .md-card-contentCustom{
     display: block;
     padding: 0 16px 16px;
+}
+
+.textTooLong
+{
+    width: 300px;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
