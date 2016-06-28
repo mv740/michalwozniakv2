@@ -2,7 +2,8 @@
  * Created by Michal Wozniak on 5/15/2016.
  */
 (function () {
-
+    'use strict';
+    
     angular
         .module('app')
         .config(configureTheme);

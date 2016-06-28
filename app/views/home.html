@@ -5,7 +5,12 @@
                      ng-class="{'md-whiteframe-10dp': hover}"
                      ng-mouseenter="hover = true"
                      ng-mouseleave="hover = false">
-                <img src="{{vm.user.avatarImageUrl}}" class="md-user-avatar" alt="image caption">
+                <img ng-src="{{vm.user.avatarImageUrl}}"
+                     class="md-user-avatar"
+                     alt="image caption"
+                     ng-image-appear
+                     no-loader
+                     easing="ease-out">
                 <div style="position: relative">
                     <md-card-content>
                         <h2>{{vm.user.headerTitle}}</h2>

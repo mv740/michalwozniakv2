@@ -27,19 +27,19 @@
                             <form name="contactForm">
                                 <md-input-container class="md-block">
                                     <label>Name:</label>
-                                    <input ng-model="vm.items.contactName" required>
+                                    <input ng-model="vm.form.name" required>
                                 </md-input-container>
                                 <md-input-container class="md-block">
                                     <label>Email:</label>
-                                    <input type="email" ng-model="vm.items.contactEmail" required>
+                                    <input type="email" ng-model="vm.form.email" required>
                                 </md-input-container>
 
                                 <md-input-container class="md-block">
                                     <label>Message:</label>
-                                    <textarea ng-model="vm.item.contactMsg"  md-maxlength="250" maxlength="250" required></textarea>
+                                    <textarea ng-model="vm.form.message"  md-maxlength="250" maxlength="250" required></textarea>
                                 </md-input-container>
 
-                                <md-button ng-click="contactForm.$dirty && contactForm.$valid && vm.submit(vm.items)" class="md-primary md-raised"
+                                <md-button ng-click="contactForm.$dirty && contactForm.$valid && vm.sendMail()" class="md-primary md-raised"
                                            ng-class="{'md-raised': (contactForm.$dirty && contactForm.$valid)}"
                                            ng-disabled="(!contactForm.$valid)"
                                            aria-label="submit">Send

@@ -51,24 +51,11 @@
                 parent: parentEl,
                 targetEvent: $event,
                 templateUrl: 'app/views/partial/contactDialog.html',
-                locals: {
-                    items: vm.items
-                },
-                controller: DialogController,
-                controllerAs: 'vm',
+                controller: 'ContactController as vm',
                 clickOutsideToClose:true,
                 bindToController: true
             });
-            function DialogController($mdDialog, items) {
-                var vm = this;
-                vm.items = items;
-                vm.submit = function () {
-                    console.log(vm.items)
-                };
-                vm.closeDialog = function() {
-                    $mdDialog.hide();
-                }
-            }
+
         }
 
     }
