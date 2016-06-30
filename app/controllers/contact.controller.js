@@ -8,8 +8,8 @@
         .module('app')
         .controller('ContactController', ContactController );
 
-    ContactController.$inject = ['$rootScope','$http','$mdDialog'];
-    function ContactController($rootScope,$http,$mdDialog) {
+    ContactController.$inject = ['$rootScope','$http','$mdDialog','$mdToast'];
+    function ContactController($rootScope,$http,$mdDialog,$mdToast) {
         var vm = this;
 
         $rootScope.ShowAvatar = true;
@@ -29,19 +29,32 @@
             console.log("test");
         };
 
-        vm.sendMail = function () {
+        vm.sendMail = function (contactForm) {
 
-            console.log(vm.form);
+            //console.log(vm.form);
 
-            var successCallback = function () {
+            var successCallback = function (contactForm) {
                 console.log("send");
+                vm.closeDialog();
+                $mdToast.show(
+                    $mdToast.simple()
+                        .textContent('Message send!')
+                        .position('bottom center')
+                        .hideDelay(3000)
+                );
+                vm.form = {};
+                contactForm.$rollbackViewValue();
+                contactForm.$setPristine(); //Set pristine state
+                contactForm.$setUntouched(); //Set state from touched to untouched
+
             };
             var errorCallback = function () {
+
                 console.log("error");
             };
 
             $http.post('/v2/server/contact.php', vm.form)
-                .then(successCallback, errorCallback);
+                .then(successCallback(contactForm), errorCallback);
 
         }
     }

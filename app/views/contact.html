@@ -39,7 +39,7 @@
                                     <textarea ng-model="vm.form.message"  md-maxlength="250" maxlength="250" required></textarea>
                                 </md-input-container>
 
-                                <md-button ng-click="contactForm.$dirty && contactForm.$valid && vm.sendMail()" class="md-primary md-raised"
+                                <md-button ng-click="contactForm.$dirty && contactForm.$valid && vm.sendMail(contactForm)" class="md-primary md-raised"
                                            ng-class="{'md-raised': (contactForm.$dirty && contactForm.$valid)}"
                                            ng-disabled="(!contactForm.$valid)"
                                            aria-label="submit">Send
