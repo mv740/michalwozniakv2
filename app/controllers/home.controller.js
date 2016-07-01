@@ -8,11 +8,14 @@
         .module('app')
         .controller('HomeController', HomeController );
 
-    HomeController.$inject = ['$mdSidenav','$mdDialog','$rootScope'];
-    function HomeController($mdSidenav,$mdDialog,$rootScope) {
+    HomeController.$inject = ['$mdSidenav','$mdDialog','$rootScope','$state'];
+    function HomeController($mdSidenav,$mdDialog,$rootScope,$state) {
         var vm = this;
 
-        $rootScope.ShowAvatar = false;
+        if($state.current.name == "home")
+        {
+            $rootScope.ShowAvatar = false;
+        }
 
         vm.toggleLeft = function () {
             $mdSidenav('left').toggle();

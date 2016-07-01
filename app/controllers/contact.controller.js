@@ -8,11 +8,14 @@
         .module('app')
         .controller('ContactController', ContactController );
 
-    ContactController.$inject = ['$rootScope','$http','$mdDialog','$mdToast'];
-    function ContactController($rootScope,$http,$mdDialog,$mdToast) {
+    ContactController.$inject = ['$rootScope','$http','$mdDialog','$mdToast','$state'];
+    function ContactController($rootScope,$http,$mdDialog,$mdToast, $state) {
         var vm = this;
 
-        $rootScope.ShowAvatar = true;
+        if($state.current.name == 'contact')
+        {
+            $rootScope.ShowAvatar = true;
+        }
         
         vm.headerTitle = "Let's Get In Touch";
         

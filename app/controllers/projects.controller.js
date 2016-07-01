@@ -7,12 +7,15 @@
     angular.module('app')
         .controller('ProjectsController', ProjectsController);
 
-    ProjectsController.$inject = ['$rootScope']; 
+    ProjectsController.$inject = ['$rootScope','$state']; 
 
-    function ProjectsController($rootScope) {
+    function ProjectsController($rootScope,$state) {
         var vm = this;
 
-        $rootScope.ShowAvatar = true;
+        if($state.current.name == 'projects')
+        {
+            $rootScope.ShowAvatar = true;
+        }
 
         vm.projects = [
             {

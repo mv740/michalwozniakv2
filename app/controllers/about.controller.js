@@ -7,12 +7,14 @@
     angular.module('app')
         .controller('AboutController', AboutController);
 
-    AboutController.$inject = ['$rootScope'];
-    function AboutController($rootScope) {
+    AboutController.$inject = ['$rootScope','$state'];
+    function AboutController($rootScope,$state) {
         var vm = this;
         
-        $rootScope.ShowAvatar = true;
-        
+        if($state.current.name == 'about')
+        {
+            $rootScope.ShowAvatar = true;
+        }
 
         vm.education = {
             'headerTitle': 'Education',
