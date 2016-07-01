@@ -109,3 +109,42 @@ md-card > :not(md-card-content) img {
     left: 50%;
     transform: translate3d(-50%, 0, 0);
 }
+
+/*introduction splash screen*/
+
+ #name{
+     -webkit-animation-duration: 3s;
+     -webkit-animation-delay: 0s;
+     -moz-animation-duration: 3s;
+     -moz-animation-delay: 0s;
+
+     color: white;
+ }
+#title{
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-duration: 3s;
+    -moz-animation-delay: 2s;
+
+    color: white;
+    margin-top: 5px;
+
+}
+.intro {
+    display: table;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    text-align: center;
+}
+#IntroBody {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+
+    background: #009688;
+    position: absolute;
+    z-index: 100;
+    height:100vh;
+    width: 100vw;
+}
