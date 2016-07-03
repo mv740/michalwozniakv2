@@ -14,6 +14,8 @@
         if($state.current.name == 'about')
         {
             $rootScope.ShowAvatar = true;
+            var element = document.getElementById("IntroBody");
+            element.parentNode.removeChild(element);
         }
 
         vm.education = {

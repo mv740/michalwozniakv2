@@ -15,6 +15,8 @@
         if($state.current.name == 'contact')
         {
             $rootScope.ShowAvatar = true;
+            var element = document.getElementById("IntroBody");
+            element.parentNode.removeChild(element);
         }
         
         vm.headerTitle = "Let's Get In Touch";
