@@ -16,7 +16,9 @@
         {
             $rootScope.ShowAvatar = true;
             var element = document.getElementById("IntroBody");
-            element.parentNode.removeChild(element);
+            if(element!= null){
+                element.parentNode.removeChild(element);
+            }
         }
         
         vm.headerTitle = "Let's Get In Touch";
