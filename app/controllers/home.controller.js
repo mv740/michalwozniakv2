@@ -61,12 +61,10 @@
             });
 
         };
-        
         function hideIntro() {
             var element = document.getElementById("IntroBody");
             element.classList.add("fadeOutUp");
         }
-      
 
     }
 })();
