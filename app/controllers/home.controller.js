@@ -15,6 +15,7 @@
         if($state.current.name == "home")
         {
             $rootScope.ShowAvatar = false;
+            setTimeout(hideIntro,4000);
         }
 
         vm.toggleLeft = function () {
@@ -59,6 +60,10 @@
                 bindToController: true
             });
 
+        };
+        function hideIntro() {
+            var element = document.getElementById("IntroBody");
+            element.classList.add("fadeOutUp");
         }
 
     }
