@@ -20,6 +20,12 @@
             }
         }
 
+        vm.user = {
+
+            url : "https://resume.creddle.io/resume/25ohmz2xruh"
+
+        };
+
         vm.education = {
             'headerTitle': 'Education',
             'content': [

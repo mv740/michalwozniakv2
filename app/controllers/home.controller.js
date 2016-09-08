@@ -15,7 +15,11 @@
         if($state.current.name == "home")
         {
             $rootScope.ShowAvatar = false;
-            setTimeout(hideIntro,4000);
+            var element = document.getElementById("IntroBody");
+            if(element !=null)
+            {
+                setTimeout(hideIntro,4000);
+            }
         }
 
         vm.toggleLeft = function () {
@@ -44,7 +48,7 @@
         {
             'headerTitle': 'About me',
             'avatarImageUrl': 'assets/images/michalwozniak_avatar.png',
-            'content': 'My name is Michal, I am currently completing my Bachelor of Software Engineering at Concordia University in Montreal, Canada.<br/><br/> When I\'m not coding something, I will be having some fun with my Arduino or raspberry pie or maybe some amazing gadget found on Kickstarter. In my spare time, I enjoy going to the gym.',
+            'content': 'My name is Michal, I am currently completing my Bachelor of Software Engineering at Concordia University in Montreal, Canada.<br/><br/> When I\'m not coding something, I will be having some fun with my Arduino or raspberry pi or maybe some amazing gadget found on Kickstarter. In my spare time, I enjoy going to the gym.',
             'buttonLabel': 'Resume',
             'buttonLink' :'https://resume.creddle.io/resume/25ohmz2xruh'
         };
@@ -62,7 +66,6 @@
 
         };
         function hideIntro() {
-            var element = document.getElementById("IntroBody");
             element.classList.add("fadeOutUp");
         }
 
