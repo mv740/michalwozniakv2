@@ -26,6 +26,17 @@
                 'headerTitle' : 'Java',
                 'subhead': 'Android application',
                 'avatarIconUrl': 'assets/icons/Android_robot.svg',
+                'avatarImageUrl': 'assets/images/jiraFlow.png',
+                'cardTitle': 'JiraFlow',
+                'cardContent': 'JiraFlow is a mobile app that provides a great experience for your Attassian\'s Jira. <ul><li>View Compagny activity stream</li> <li>Comment on task</li> <li>Create issues</li>Access your sprint dashboard <li> <li>Drag and drop your issue in your sprint board</li></li></ul> ',
+                'buttonIconUrl': 'assets/icons/githubLogo.svg',
+                'buttonLink': '',
+                'buttonLabel' :'Github'
+            },
+            {
+                'headerTitle' : 'Java',
+                'subhead': 'Android application',
+                'avatarIconUrl': 'assets/icons/Android_robot.svg',
                 'avatarImageUrl': 'assets/images/test.png',
                 'cardTitle': 'Virtual Museum Guide',
                 'cardContent': 'Android application that helps users explore the museum and its exhibitions. <ul><li>Indoor Offline map</li> <li>Estimote Beacon technology</li></ul> ',
