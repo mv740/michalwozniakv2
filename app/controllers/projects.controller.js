@@ -27,8 +27,8 @@
                 'subhead': 'Android application',
                 'avatarIconUrl': 'assets/icons/Android_robot.svg',
                 'avatarImageUrl': 'assets/images/jiraFlow.png',
-                'cardTitle': 'JiraFlow',
-                'cardContent': 'JiraFlow is a mobile app that provides a great experience for your Attassian\'s Jira. <ul><li>View Compagny activity stream</li> <li>Comment on task</li> <li>Create issues</li><li>Access your sprint dashboard </li></li>Drag and drop your issue in your sprint board</li></ul> <br/> Coming soon on Google Play ',
+                'cardTitle': 'JiraFlow (Soon on Google Play)',
+                'cardContent': 'JiraFlow is a mobile app that provides a great experience for your Attassian\'s Jira. <ul><li>View Compagny activity stream</li> <li>Comment on task</li> <li>Create issues</li><li>Access your sprint dashboard </li></li>Drag and drop your issue in your sprint board</li></ul>',
                 'buttonIconUrl': 'assets/icons/Get_it_on_Google_play.svg',
                 'buttonLink': '',
                 'buttonLabel' :'Github'
